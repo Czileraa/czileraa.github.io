@@ -14,10 +14,25 @@
     .description { font-size: 14px; margin-top: 10px; color: #fff; line-height: 1.6; padding: 10px; background-color: rgba(0, 0, 0, 0.6); border-radius: 8px; }
     .price { font-size: 16px; font-weight: bold; margin-top: 5px; color: #ff9800; }
   </style>
+  <script>
+    // Blokada prawego przycisku myszy
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Blokada klawiszy: Ctrl+S, Ctrl+U, F12, Ctrl+Shift+I
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U')) {
+        e.preventDefault();
+      }
+      if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+        e.preventDefault();
+      }
+    });
+  </script>
 </head>
 <body>
   <h1>😇 Menu Czilery 😇</h1>
   <div class="gallery">
+
     <!-- Obrazki -->
     <div class="gallery-item">
       <img src="https://files.catbox.moe/ikr7pj.jpg" alt="Obrazek 1">
@@ -27,7 +42,7 @@
         Pen zawiera 2g premium konopii <br>
         0,25g kiefu ktorym sa otoczone konopie<br>
         0,25g ekstraktu konopnego ktory dodaje dodatkowych terpenow i kanaboidow<br>
-        Dostepna wieksza ilosc jestes zainteresowany kupnem? - @czileraa - telegram/1037525614 zangii
+        Dostepna wieksza ilosc? @czileraa - telegram/1037525614 zangii
       </div>
     </div>
 
@@ -36,18 +51,18 @@
       <div class="caption">Xanax 2MG </div>
       <div class="description">
         Cena: 1 słoik (30szt) - 300<br>
-       Jest mozliwy detal jak i hurt <br>
-     Dostepna wieksza ilosc jestes zainteresowany kupnem? - @czileraa - telegram/1037525614 zangii <br> 
-</div>
+        Jest mozliwy detal jak i hurt <br>
+        Dostepna wieksza ilosc? @czileraa - telegram/1037525614 zangii <br> 
+      </div>
     </div>
 
     <div class="gallery-item">
       <img src="https://files.catbox.moe/q4z4ow.jpg" alt="Obrazek 3">
       <div class="caption">3CMC TOP GLASS 50%SPEED 50%EUFO</div>
       <div class="description">
-        cena: 1 - 60, 3, 170, 5 - 230, 10 - 350, 25, 700 (wiecej dm) <br>
-       Dostepna wieksza ilosc jestes zainteresowany kupnem? - @czileraa - telegram/1037525614 zangii <br>
-     </div>
+        Cena: 1 - 60, 3 - 170, 5 - 230, 10 - 350, 25 - 700 (wiecej dm) <br>
+        Dostepna wieksza ilosc? @czileraa - telegram/1037525614 zangii <br>
+      </div>
     </div>
 
     <!-- Filmy -->
@@ -58,10 +73,10 @@
       </video>
       <div class="caption">Punisher 300MG NL </div>
       <div class="description">
-        Cena: 1 - 40,  5 - 120, 10 -150, 20 - 280 (wiecej dm)  <br>
+        Cena: 1 - 40, 5 - 120, 10 - 150, 20 - 280 (wiecej dm) <br>
         Cukierek zawiera 300mg mocy <br>
-       AKTUALNIE TRWA PROMOCJA NA 10SZT ZA 150ZŁ <br>
-      Dostepna wieksza ilosc jestes zainteresowany kupnem? - @czileraa - telegram/1037525614 zangii <br>
+        AKTUALNIE TRWA PROMOCJA NA 10SZT ZA 150ZŁ <br>
+        Dostepna wieksza ilosc? @czileraa - telegram/1037525614 zangii <br>
       </div>
     </div>
 
@@ -73,8 +88,8 @@
       <div class="caption">Coco</div>
       <div class="description">
         Cena: 1 - 350<br>
-       Tlusta chrzanowa cegła <br>
-        Jestes zainteresowany kupnem? - @czileraa - telegram/1037525614 zangii<br>
+        Tlusta chrzanowa cegła <br>
+        Jestes zainteresowany kupnem? @czileraa - telegram/1037525614 zangii<br>
       </div>
     </div>
 
@@ -85,46 +100,51 @@
       </video>
       <div class="caption">3CMC TOP GLASS 50%SPEED 50%EUFO</div>
       <div class="description">
-        Cena: 1 - 60, 3, 170, 5 - 230, 10 - 350, 25, 700 (wiecej dm)<br>
-        Dostepna wieksza ilosc jestes zainteresowany kupnem? - @czileraa - telegram/1037525614 zangii<br>
-     </div>
+        Cena: 1 - 60, 3 - 170, 5 - 230, 10 - 350, 25 - 700 (wiecej dm)<br>
+        Dostepna wieksza ilosc? @czileraa - telegram/1037525614 zangii<br>
+      </div>
     </div>
 
-<div class="gallery-item">
-<video controls>
-<source src="https://files.catbox.moe/fin6ff.MP4" type="video/mp4">
-Twoja przeglądarka nie wspiera odtwarzania wideo.
-</video>
-<div class="caption">Purple Punch USA Mid Cali</div>
-Cena: 1 - 100, 5 - 450, 10 - 800 <br>
-Nowa odmianka z słonecznej kalifornii. <br>
-Jest to Indica stworzona z połączenia Larry OG x Granddaddy Purple. Główne akordy zapachowe to czerwone owoce min. Winogrono, borówka i wiśnie, powoduje potężne gastro smakując przy tym nieziemsko 😋 <br>
-Jestes zainteresowany kupnem? - @czileraa - telegram/1037525614 zangii <br>
-</div>
+    <div class="gallery-item">
+      <video controls>
+        <source src="https://files.catbox.moe/fin6ff.MP4" type="video/mp4">
+        Twoja przeglądarka nie wspiera odtwarzania wideo.
+      </video>
+      <div class="caption">Purple Punch USA Mid Cali</div>
+      <div class="description">
+        Cena: 1 - 100, 5 - 450, 10 - 800 <br>
+        Nowa odmianka z słonecznej Kalifornii. <br>
+        Jest to Indica stworzona z połączenia Larry OG x Granddaddy Purple. Główne akordy zapachowe to winogrono, borówka i wiśnie, daje mocne gastro i nieziemski smak 😋 <br>
+        Jestes zainteresowany kupnem? @czileraa - telegram/1037525614 zangii <br>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <video controls>
+        <source src="https://files.catbox.moe/mwyujb.mp4" type="video/mp4">
+        Twoja przeglądarka nie wspiera odtwarzania wideo.
+      </video>
+      <div class="caption">🍫 Rs6 Dry blonde </div>
+      <div class="description">
+        Cena: 1 - 50, 2 - 100, 5 - 200, 10 - 400<br>
+        Dobrej jakości suchy hasz typu blonde <br>
+        Jestes zainteresowany kupnem? @czileraa - telegram/1037525614 zangii <br>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <video controls>
+        <source src="https://files.catbox.moe/5t8rgc.mp4" type="video/mp4">
+        Twoja przeglądarka nie wspiera odtwarzania wideo.
+      </video>
+      <div class="caption">Forbidden Fruit</div>
+      <div class="description">
+        Cena: 1 - 50, 5 - 250, 10 - 400, 15 - 580<br>
+        Owocowa indica stworzona z połączenia cherry pie x tangie. Aromat owocowy, działanie usypiające i pobudzające gastro. <br>
+        Jestes zainteresowany kupnem? @czileraa - telegram/1037525614 zangii <br>
+      </div>
+    </div>
+
   </div>
-
-<div class="gallery-item">
-<video controls>
-<source src="https://files.catbox.moe/mwyujb.mp4" type="video/mp4">
-Twoja przeglądarka nie wspiera odtwarzania wideo.
-</video>
-<div class="caption">🍫 Rs6 Dry blonde </div>
-Cena: 1 - 50 2, 100, 5 - 200, 10 - 400,  <br>
-Dobrej jakości suchy hasz typu blonde <br>
-</div>
-
-
-<div class="gallery-item">
-<video controls>
-<source src="https://files.catbox.moe/5t8rgc.mp4" type="video/mp4">
-Twoja przeglądarka nie wspiera odtwarzania wideo.
-</video>
-<div class="caption">Forbidden Fruit</div>
-Cena: 1 - 50, 5 - 250, 10 - 400, 15 - 580,  <br>
-Doba owocowa indicia stworzona z połączenia cherry pie x tangie, który charakteryzuje się owocowym aromatem i usypiającym i pobudzającym gastro działaniem. <br>
-Jestes zainteresowany kupnem? - @czileraa - telegram/1037525614 zangii <br>
-</div>
-  </div>
-
 </body>
 </html>
