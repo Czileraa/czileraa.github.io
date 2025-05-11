@@ -4,37 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu Czileraa</title>
-
-  <!-- Lightbox CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
-
   <style>
-    body { font-family: Arial, sans-serif; background: #111; color: #fff; margin: 0; padding: 0; }
-    h1 { text-align: center; padding: 20px; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; padding: 10px; }
-    .gallery-item { text-align: center; position: relative; }
-    .gallery img, .gallery video {
-      width: 100%;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      filter: brightness(1.1) contrast(1.2); /* Poprawia jasność i kontrast */
+    body { 
+      font-family: Arial, sans-serif; 
+      background: #111; 
+      color: #fff; 
+      margin: 0; 
+      padding: 0; 
     }
-    .gallery img:hover, .gallery video:hover {
-      transform: scale(1.05); /* Powiększa obrazek na hover */
-      box-shadow: 0 4px 20px rgba(255, 165, 0, 0.8); /* Dodaje cień wokół obrazka */
+    h1 { 
+      text-align: center; 
+      padding: 20px; 
     }
-    .caption { font-size: 14px; margin-top: 10px; color: #aaa; }
-    .description { font-size: 14px; margin-top: 10px; color: #fff; line-height: 1.6; padding: 10px; background-color: rgba(0, 0, 0, 0.6); border-radius: 8px; }
-    .price { font-size: 16px; font-weight: bold; margin-top: 5px; color: #ff9800; }
-    .contact { text-align: center; margin-top: 20px; }
-    .contact a { color: #ff9800; text-decoration: none; }
+    .gallery { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 20px; 
+      padding: 20px; 
+    }
+    .gallery-item { 
+      background: #222; 
+      border-radius: 12px; 
+      padding: 15px; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.7);
+    }
+    .gallery img, .gallery video { 
+      width: 100%; 
+      height: 250px; 
+      object-fit: cover; 
+      border-radius: 8px; 
+    }
+    .caption { 
+      font-size: 16px; 
+      margin-top: 10px; 
+      color: #ff9800; 
+      font-weight: bold;
+    }
+    .description { 
+      font-size: 14px; 
+      margin-top: 10px; 
+      color: #ddd; 
+      line-height: 1.6; 
+    }
+    a {
+      color: #1e90ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .contact {
+      text-align: center; 
+      margin-bottom: 20px;
+    }
+    .btn {
+      background-color: #ff9800;
+      color: #000;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    .btn:hover {
+      background-color: #e68900;
+    }
   </style>
 </head>
 <body>
-
   <h1>😇 Menu Czilery 😇</h1>
 
-  <!-- Kontakt -->
   <div class="contact">
     📢 <a href="https://t.me/+9XyHDGKpATI5OWI0" target="_blank">Wejdź na mój kanał Telegram</a> |
     📩 <a href="https://t.me/czileraa" target="_blank">Napisz do mnie (@czileraa)</a> |
@@ -42,14 +87,11 @@
     <button class="btn" onclick="copyZangi()">Skopiuj numer</button>
   </div>
 
-  <!-- Galeria -->
   <div class="gallery">
 
-    <!-- Przykładowy obrazek -->
+    <!-- Obrazek 1 -->
     <div class="gallery-item">
-      <a href="https://files.catbox.moe/ikr7pj.jpg" data-lightbox="gallery" data-title="Packwoods x Gas House LA">
-        <img src="https://files.catbox.moe/ikr7pj.jpg" alt="Packwoods">
-      </a>
+      <img src="https://files.catbox.moe/ikr7pj.jpg" alt="Packwoods">
       <div class="caption">Packwoods x Gas House LA </div>
       <div class="description">
         Cena: 1 - 230zł <br>
@@ -59,62 +101,107 @@
       </div>
     </div>
 
-    <!-- Tak samo robisz dla innych zdjęć -->
+    <!-- Obrazek 2 -->
     <div class="gallery-item">
-      <a href="https://files.catbox.moe/x7uap2.jpg" data-lightbox="gallery" data-title="Xanax 2MG">
-        <img src="https://files.catbox.moe/x7uap2.jpg" alt="Xanax 2MG">
-      </a>
+      <img src="https://files.catbox.moe/x7uap2.jpg" alt="Xanax">
       <div class="caption">Xanax 2MG</div>
       <div class="description">
-        Cena: 1 słoik (30szt) - 300zł<br>
-        Jest możliwy detal jak i hurt<br>
+        Cena: 1 słoik (30szt) - 300zł <br>
+        Detal i hurt możliwy <br>
         <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
+    <!-- Obrazek 3 -->
     <div class="gallery-item">
-      <a href="https://files.catbox.moe/q4z4ow.jpg" data-lightbox="gallery" data-title="3CMC TOP GLASS 50%SPEED 50%EUFO">
-        <img src="https://files.catbox.moe/q4z4ow.jpg" alt="3CMC TOP GLASS">
-      </a>
-      <div class="caption">3CMC TOP GLASS 50%SPEED 50%EUFO</div>
+      <img src="https://files.catbox.moe/q4z4ow.jpg" alt="3CMC">
+      <div class="caption">3CMC TOP GLASS</div>
       <div class="description">
-        Cena: 1 - 60zł, 3 - 170zł, 5 - 230zł, 10 - 350zł<br>
+        Cena: 1 - 60, 3 - 170, 5 - 230 <br>
+        10 - 350, 25 - 700 (więcej DM) <br>
         <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
-    <!-- Filmiki -->
+    <!-- Film 1 -->
     <div class="gallery-item">
       <video controls>
         <source src="https://files.catbox.moe/yjqg7y.MP4" type="video/mp4">
-        Twoja przeglądarka nie wspiera odtwarzania wideo.
       </video>
       <div class="caption">Punisher 300MG NL</div>
       <div class="description">
-        Cena: 1 - 40zł, 5 - 120zł, 10 - 150zł, 20 - 280zł<br>
-        Cukierek zawiera 300mg mocy<br>
-        AKTUALNIE TRWA PROMOCJA NA 10SZT ZA 150ZŁ<br>
+        Cena: 1 - 40, 5 - 120, 10 - 150 <br>
+        PROMO: 10szt za 150zł! <br>
         <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
+    <!-- Film 2 -->
     <div class="gallery-item">
       <video controls>
         <source src="https://files.catbox.moe/k83agj.MP4" type="video/mp4">
-        Twoja przeglądarka nie wspiera odtwarzania wideo.
       </video>
       <div class="caption">Coco</div>
       <div class="description">
-        Cena: 1 - 350zł<br>
-        Tłusta chrzanowa cegła<br>
+        Cena: 1 - 350zł <br>
+        Tłusta chrzanowa cegła <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
+      </div>
+    </div>
+
+    <!-- Film 3 -->
+    <div class="gallery-item">
+      <video controls>
+        <source src="https://files.catbox.moe/exxd3v.MP4" type="video/mp4">
+      </video>
+      <div class="caption">3CMC TOP GLASS</div>
+      <div class="description">
+        Cena: 1 - 60, 3 - 170, 5 - 230 <br>
+        10 - 350, 25 - 700 (więcej DM) <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
+      </div>
+    </div>
+
+    <!-- Film 4 -->
+    <div class="gallery-item">
+      <video controls>
+        <source src="https://files.catbox.moe/fin6ff.MP4" type="video/mp4">
+      </video>
+      <div class="caption">Purple Punch USA</div>
+      <div class="description">
+        Cena: 1 - 100, 5 - 450, 10 - 800 <br>
+        Smak: winogrono, borówka, wiśnie <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
+      </div>
+    </div>
+
+    <!-- Film 5 -->
+    <div class="gallery-item">
+      <video controls>
+        <source src="https://files.catbox.moe/mwyujb.mp4" type="video/mp4">
+      </video>
+      <div class="caption">🍫 Rs6 Dry blonde</div>
+      <div class="description">
+        Cena: 1 - 50, 2 - 100, 5 - 200, 10 - 400 <br>
+        Dobry suchy hasz typu blonde <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
+      </div>
+    </div>
+
+    <!-- Film 6 -->
+    <div class="gallery-item">
+      <video controls>
+        <source src="https://files.catbox.moe/5t8rgc.mp4" type="video/mp4">
+      </video>
+      <div class="caption">Forbidden Fruit</div>
+      <div class="description">
+        Cena: 1 - 50, 5 - 250, 10 - 400, 15 - 580 <br>
+        Cherry Pie x Tangie 🌿 <br>
         <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
   </div>
-
-  <!-- Lightbox JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
   <script>
     function copyZangi() {
@@ -124,5 +211,6 @@
       });
     }
   </script>
+
 </body>
 </html>
