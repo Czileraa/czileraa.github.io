@@ -3,148 +3,214 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Czileraa Menu (TYLKO MENU/CENY ZAMAWIAMY NA TG/ZANGI)</title>
+  <title>Menu Czileraa</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #111; color: #fff; margin: 0; padding: 0; }
-    h1 { text-align: center; padding: 20px; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; padding: 10px; }
-    .gallery-item { text-align: center; }
-    .gallery img, .gallery video { width: 100%; border-radius: 8px; }
-    .caption { font-size: 14px; margin-top: 10px; color: #aaa; }
-    .description { font-size: 14px; margin-top: 10px; color: #fff; line-height: 1.6; padding: 10px; background-color: rgba(0, 0, 0, 0.6); border-radius: 8px; }
-    .price { font-size: 16px; font-weight: bold; margin-top: 5px; color: #ff9800; }
+    body { 
+      font-family: Arial, sans-serif; 
+      background: #111; 
+      color: #fff; 
+      margin: 0; 
+      padding: 0; 
+    }
+    h1 { 
+      text-align: center; 
+      padding: 20px; 
+    }
+    .gallery { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 20px; 
+      padding: 20px; 
+    }
+    .gallery-item { 
+      background: #222; 
+      border-radius: 12px; 
+      padding: 15px; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.7);
+    }
+    .gallery img, .gallery video { 
+      width: 100%; 
+      height: 250px; 
+      object-fit: cover; 
+      border-radius: 8px; 
+    }
+    .caption { 
+      font-size: 16px; 
+      margin-top: 10px; 
+      color: #ff9800; 
+      font-weight: bold;
+    }
+    .description { 
+      font-size: 14px; 
+      margin-top: 10px; 
+      color: #ddd; 
+      line-height: 1.6; 
+    }
+    a {
+      color: #1e90ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .contact {
+      text-align: center; 
+      margin-bottom: 20px;
+    }
+    .btn {
+      background-color: #ff9800;
+      color: #000;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    .btn:hover {
+      background-color: #e68900;
+    }
   </style>
-  <script>
-    // Blokada prawego przycisku myszy
-    document.addEventListener('contextmenu', event => event.preventDefault());
-
-    // Blokada klawiszy: Ctrl+S, Ctrl+U, F12, Ctrl+Shift+I
-    document.addEventListener('keydown', function(e) {
-      if (e.ctrlKey && (e.key === 's' || e.key === 'u' || e.key === 'S' || e.key === 'U')) {
-        e.preventDefault();
-      }
-      if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
-        e.preventDefault();
-      }
-    });
-  </script>
 </head>
 <body>
   <h1>😇 Menu Czilery 😇</h1>
+
+  <div class="contact">
+    📢 <a href="https://t.me/+9XyHDGKpATI5OWI0" target="_blank">Wejdź na mój kanał Telegram</a> |
+    📩 <a href="https://t.me/czileraa" target="_blank">Napisz do mnie (@czileraa)</a> |
+    📞 Zangi: <strong id="zangiNumber">1037525614</strong>
+    <button class="btn" onclick="copyZangi()">Skopiuj numer</button>
+  </div>
+
   <div class="gallery">
 
-    <!-- Obrazki -->
+    <!-- Obrazek 1 -->
     <div class="gallery-item">
-      <img src="https://files.catbox.moe/ikr7pj.jpg" alt="Obrazek 1">
+      <img src="https://files.catbox.moe/ikr7pj.jpg" alt="Packwoods">
       <div class="caption">Packwoods x Gas House LA </div>
       <div class="description">
         Cena: 1 - 230zł <br>
         Pen zawiera 2g premium konopii <br>
-        0,25g kiefu ktorym sa otoczone konopie<br>
-        0,25g ekstraktu konopnego ktory dodaje dodatkowych terpenow i kanaboidow<br>
-        Dostepna wieksza ilosc? @czileraa - telegram/1037525614 zangii
+        0,25g kiefu + 0,25g ekstraktu <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
+    <!-- Obrazek 2 -->
     <div class="gallery-item">
-      <img src="https://files.catbox.moe/x7uap2.jpg" alt="Obrazek 2">
-      <div class="caption">Xanax 2MG </div>
+      <img src="https://files.catbox.moe/x7uap2.jpg" alt="Xanax">
+      <div class="caption">Xanax 2MG</div>
       <div class="description">
-        Cena: 1 słoik (30szt) - 300<br>
-        Jest mozliwy detal jak i hurt <br>
-        Dostepna wieksza ilosc? @czileraa - telegram/1037525614 zangii <br> 
+        Cena: 1 słoik (30szt) - 300zł <br>
+        Detal i hurt możliwy <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
+    <!-- Obrazek 3 -->
     <div class="gallery-item">
-      <img src="https://files.catbox.moe/q4z4ow.jpg" alt="Obrazek 3">
-      <div class="caption">3CMC TOP GLASS 50%SPEED 50%EUFO</div>
+      <img src="https://files.catbox.moe/q4z4ow.jpg" alt="3CMC">
+      <div class="caption">3CMC TOP GLASS</div>
       <div class="description">
-        Cena: 1 - 60, 3 - 170, 5 - 230, 10 - 350, 25 - 700 (wiecej dm) <br>
-        Dostepna wieksza ilosc? @czileraa - telegram/1037525614 zangii <br>
+        Cena: 1 - 60, 3 - 170, 5 - 230 <br>
+        10 - 350, 25 - 700 (więcej DM) <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
-    <!-- Filmy -->
+    <!-- Film 1 -->
     <div class="gallery-item">
       <video controls>
         <source src="https://files.catbox.moe/yjqg7y.MP4" type="video/mp4">
-        Twoja przeglądarka nie wspiera odtwarzania wideo.
       </video>
-      <div class="caption">Punisher 300MG NL </div>
+      <div class="caption">Punisher 300MG NL</div>
       <div class="description">
-        Cena: 1 - 40, 5 - 120, 10 - 150, 20 - 280 (wiecej dm) <br>
-        Cukierek zawiera 300mg mocy <br>
-        AKTUALNIE TRWA PROMOCJA NA 10SZT ZA 150ZŁ <br>
-        Dostepna wieksza ilosc? @czileraa - telegram/1037525614 zangii <br>
+        Cena: 1 - 40, 5 - 120, 10 - 150 <br>
+        PROMO: 10szt za 150zł! <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
+    <!-- Film 2 -->
     <div class="gallery-item">
       <video controls>
         <source src="https://files.catbox.moe/k83agj.MP4" type="video/mp4">
-        Twoja przeglądarka nie wspiera odtwarzania wideo.
       </video>
       <div class="caption">Coco</div>
       <div class="description">
-        Cena: 1 - 350<br>
-        Tlusta chrzanowa cegła <br>
-        Jestes zainteresowany kupnem? @czileraa - telegram/1037525614 zangii<br>
+        Cena: 1 - 350zł <br>
+        Tłusta chrzanowa cegła <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
+    <!-- Film 3 -->
     <div class="gallery-item">
       <video controls>
         <source src="https://files.catbox.moe/exxd3v.MP4" type="video/mp4">
-        Twoja przeglądarka nie wspiera odtwarzania wideo.
       </video>
-      <div class="caption">3CMC TOP GLASS 50%SPEED 50%EUFO</div>
+      <div class="caption">3CMC TOP GLASS</div>
       <div class="description">
-        Cena: 1 - 60, 3 - 170, 5 - 230, 10 - 350, 25 - 700 (wiecej dm)<br>
-        Dostepna wieksza ilosc? @czileraa - telegram/1037525614 zangii<br>
+        Cena: 1 - 60, 3 - 170, 5 - 230 <br>
+        10 - 350, 25 - 700 (więcej DM) <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
+    <!-- Film 4 -->
     <div class="gallery-item">
       <video controls>
         <source src="https://files.catbox.moe/fin6ff.MP4" type="video/mp4">
-        Twoja przeglądarka nie wspiera odtwarzania wideo.
       </video>
-      <div class="caption">Purple Punch USA Mid Cali</div>
+      <div class="caption">Purple Punch USA</div>
       <div class="description">
         Cena: 1 - 100, 5 - 450, 10 - 800 <br>
-        Nowa odmianka z słonecznej Kalifornii. <br>
-        Jest to Indica stworzona z połączenia Larry OG x Granddaddy Purple. Główne akordy zapachowe to winogrono, borówka i wiśnie, daje mocne gastro i nieziemski smak 😋 <br>
-        Jestes zainteresowany kupnem? @czileraa - telegram/1037525614 zangii <br>
+        Smak: winogrono, borówka, wiśnie <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
+    <!-- Film 5 -->
     <div class="gallery-item">
       <video controls>
         <source src="https://files.catbox.moe/mwyujb.mp4" type="video/mp4">
-        Twoja przeglądarka nie wspiera odtwarzania wideo.
       </video>
-      <div class="caption">🍫 Rs6 Dry blonde </div>
+      <div class="caption">🍫 Rs6 Dry blonde</div>
       <div class="description">
-        Cena: 1 - 50, 2 - 100, 5 - 200, 10 - 400<br>
-        Dobrej jakości suchy hasz typu blonde <br>
-        Jestes zainteresowany kupnem? @czileraa - telegram/1037525614 zangii <br>
+        Cena: 1 - 50, 2 - 100, 5 - 200, 10 - 400 <br>
+        Dobry suchy hasz typu blonde <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
+    <!-- Film 6 -->
     <div class="gallery-item">
       <video controls>
         <source src="https://files.catbox.moe/5t8rgc.mp4" type="video/mp4">
-        Twoja przeglądarka nie wspiera odtwarzania wideo.
       </video>
       <div class="caption">Forbidden Fruit</div>
       <div class="description">
-        Cena: 1 - 50, 5 - 250, 10 - 400, 15 - 580<br>
-        Owocowa indica stworzona z połączenia cherry pie x tangie. Aromat owocowy, działanie usypiające i pobudzające gastro. <br>
-        Jestes zainteresowany kupnem? @czileraa - telegram/1037525614 zangii <br>
+        Cena: 1 - 50, 5 - 250, 10 - 400, 15 - 580 <br>
+        Cherry Pie x Tangie 🌿 <br>
+        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
       </div>
     </div>
 
   </div>
+
+  <script>
+    function copyZangi() {
+      const zangiNumber = document.getElementById('zangiNumber').innerText;
+      navigator.clipboard.writeText(zangiNumber).then(() => {
+        alert('Numer Zangi skopiowany: ' + zangiNumber);
+      });
+    }
+  </script>
+
 </body>
 </html>
