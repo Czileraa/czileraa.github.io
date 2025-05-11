@@ -12,8 +12,17 @@
     body { font-family: Arial, sans-serif; background: #111; color: #fff; margin: 0; padding: 0; }
     h1 { text-align: center; padding: 20px; }
     .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; padding: 10px; }
-    .gallery-item { text-align: center; }
-    .gallery img, .gallery video { width: 100%; border-radius: 8px; cursor: pointer; }
+    .gallery-item { text-align: center; position: relative; }
+    .gallery img, .gallery video {
+      width: 100%;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      filter: brightness(1.1) contrast(1.2); /* Poprawia jasność i kontrast */
+    }
+    .gallery img:hover, .gallery video:hover {
+      transform: scale(1.05); /* Powiększa obrazek na hover */
+      box-shadow: 0 4px 20px rgba(255, 165, 0, 0.8); /* Dodaje cień wokół obrazka */
+    }
     .caption { font-size: 14px; margin-top: 10px; color: #aaa; }
     .description { font-size: 14px; margin-top: 10px; color: #fff; line-height: 1.6; padding: 10px; background-color: rgba(0, 0, 0, 0.6); border-radius: 8px; }
     .price { font-size: 16px; font-weight: bold; margin-top: 5px; color: #ff9800; }
@@ -50,7 +59,7 @@
       </div>
     </div>
 
-    <!-- Kolejne zdjęcia z powiększeniem -->
+    <!-- Tak samo robisz dla innych zdjęć -->
     <div class="gallery-item">
       <a href="https://files.catbox.moe/x7uap2.jpg" data-lightbox="gallery" data-title="Xanax 2MG">
         <img src="https://files.catbox.moe/x7uap2.jpg" alt="Xanax 2MG">
