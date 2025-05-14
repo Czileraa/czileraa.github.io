@@ -1,257 +1,179 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Czileraa</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sklep Rowerowy</title>
 
-  <!-- Meta tagi pod zdjęcie przy linku (Messenger, WhatsApp itp.) -->
-  <meta property="og:title" content="Menu Czileraa">
-  <meta property="og:description" content="Sprawdź aktualną ofertę 🌿💊💥">
-  <meta property="og:image" content="https://files.catbox.moe/3l8fey.png"> <!-- podmień na swoje -->
-  <meta property="og:url" content="https://czileraa.github.io/"> <!-- jeśli chcesz -->
+  <!-- Meta (np. do linkowania na socialach) -->
+  <meta property="og:title" content="Sklep Rowerowy">
+  <meta property="og:description" content="Sprawdź nasze najnowsze modele rowerów i akcesoriów 🚴">
+  <meta property="og:image" content="https://files.catbox.moe/ikr7pj.jpg">
+  <meta property="og:url" content="https://twojskleprowerowy.pl">
   <meta property="og:type" content="website">
 
   <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      background: #111; 
-      color: #fff; 
-      margin: 0; 
-      padding: 0; 
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+      color: #333;
     }
-    h1 { 
-      text-align: center; 
-      padding: 20px; 
+
+    header {
+      background-color: #1976d2;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
     }
-    .gallery { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-      gap: 20px; 
-      padding: 20px; 
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
-    .gallery-item { 
-      background: #222; 
-      border-radius: 12px; 
-      padding: 15px; 
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-      transition: transform 0.2s, box-shadow 0.2s;
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px;
     }
+
+    .gallery-item {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
     .gallery-item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.7);
+      transform: translateY(-5px);
     }
-    .gallery img, .gallery video { 
-      width: 100%; 
-      height: 250px; 
-      object-fit: cover; 
-      border-radius: 8px; 
+
+    .gallery img,
+    .gallery video {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
-    .caption { 
-      font-size: 16px; 
-      margin-top: 10px; 
-      color: #ff9800; 
+
+    .caption {
+      font-size: 18px;
       font-weight: bold;
+      padding: 15px 15px 0;
+      color: #1976d2;
     }
-    .description { 
-      font-size: 14px; 
-      margin-top: 10px; 
-      color: #ddd; 
-      line-height: 1.6; 
+
+    .description {
+      padding: 0 15px 15px;
+      font-size: 14px;
+      color: #555;
     }
-    a {
-      color: #1e90ff;
+
+    .description a {
+      color: #1976d2;
+      font-weight: bold;
       text-decoration: none;
     }
-    a:hover {
+
+    .description a:hover {
       text-decoration: underline;
     }
+
     .contact {
-      text-align: center; 
-      margin-bottom: 20px;
-    }
-    .btn {
-      background-color: #ff9800;
-      color: #000;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 6px;
-      cursor: pointer;
+      text-align: center;
+      padding: 20px;
+      background-color: #e3f2fd;
+      color: #1976d2;
       font-weight: bold;
-      margin-left: 10px;
-    }
-    .btn:hover {
-      background-color: #e68900;
     }
   </style>
 </head>
 <body>
-  <h1>😇 Menu Czilery 😇</h1>
+
+  <header>
+    <h1>🚴‍♂️ Sklep Rowerowy PRO 🚴‍♀️</h1>
+    <p>Nowoczesne rowery, części i akcesoria - sprawdź naszą ofertę</p>
+  </header>
 
   <div class="contact">
-    📢 <a href="https://t.me/+9XyHDGKpATI5OWI0" target="_blank">Wejdź na mój kanał Telegram</a> |
-    📩 <a href="https://t.me/czileraa" target="_blank">Napisz do mnie (@czileraa)</a> |
-    📞 Zangi: <strong id="zangiNumber">1037525614</strong>
-    <button class="btn" onclick="copyZangi()">Skopiuj numer</button>
+    📞 Infolinia: <span id="phone">+48 600 123 456</span> | 
+    📧 <a href="mailto:kontakt@rowerypro.pl">kontakt@rowerypro.pl</a>
   </div>
 
   <div class="gallery">
 
-    <!-- Obrazek 1 -->
+    <!-- Rower 1 -->
     <div class="gallery-item">
-      <img src="https://files.catbox.moe/ikr7pj.jpg" alt="Packwoods">
-      <div class="caption">Packwoods x Gas House LA </div>
+      <img src="https://files.catbox.moe/ikr7pj.jpg" alt="Rower MTB">
+      <div class="caption">Rower MTB X-Trail 500</div>
       <div class="description">
-        Cena: 1 - 230zł <br>
-        Pen zawiera 2g premium konopii <br>
-        0,25g kiefu + 0,25g ekstraktu <br>
-        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
+        Cena: 2 499 zł <br>
+        Lekka aluminiowa rama, 21 biegów Shimano <br>
+        <a href="#">Zobacz więcej</a>
       </div>
     </div>
 
-    <!-- Obrazek 2 -->
+    <!-- Rower 2 -->
     <div class="gallery-item">
-      <img src="https://files.catbox.moe/x7uap2.jpg" alt="Xanax">
-      <div class="caption">Xanax 2MG</div>
+      <img src="https://files.catbox.moe/x7uap2.jpg" alt="Rower miejski">
+      <div class="caption">Rower Miejski CityLine</div>
       <div class="description">
-        Cena: 1 słoik (30szt) - 300zł <br>
-        Detal i hurt możliwy <br>
-        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
+        Cena: 1 199 zł <br>
+        Idealny do codziennych dojazdów po mieście <br>
+        <a href="#">Zobacz więcej</a>
       </div>
     </div>
 
-    <!-- Obrazek 3 -->
+    <!-- Akcesorium -->
     <div class="gallery-item">
-      <img src="https://files.catbox.moe/q4z4ow.jpg" alt="3CMC">
-      <div class="caption">3CMC TOP GLASS</div>
+      <img src="https://files.catbox.moe/q4z4ow.jpg" alt="Kask rowerowy">
+      <div class="caption">Kask Rowerowy SafeRide</div>
       <div class="description">
-        Cena: 1 - 60, 3 - 170, 5 - 230 <br>
-        10 - 350, 25 - 700 (więcej DM) <br>
-        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
+        Cena: 249 zł <br>
+        Certyfikowany, wygodny i lekki <br>
+        <a href="#">Zobacz więcej</a>
       </div>
     </div>
 
-    <!-- Film 1 -->
+    <!-- Wideo prezentacja roweru MTB -->
     <div class="gallery-item">
       <video controls>
         <source src="https://files.catbox.moe/yjqg7y.MP4" type="video/mp4">
       </video>
-      <div class="caption">Punisher 300MG NL</div>
+      <div class="caption">Prezentacja Roweru MTB X-Trail</div>
       <div class="description">
-        Cena: 1 - 40, 5 - 120, 10 - 150 <br>
-        PROMO: 10szt za 150zł! <br>
-        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
+        Zobacz w akcji nasz bestsellerowy rower górski! <br>
+        <a href="#">Obejrzyj więcej testów</a>
       </div>
     </div>
 
-    <!-- Film 2 -->
+    <!-- Wideo: recenzja roweru miejskiego -->
     <div class="gallery-item">
       <video controls>
         <source src="https://files.catbox.moe/k83agj.MP4" type="video/mp4">
       </video>
-      <div class="caption">Coco</div>
+      <div class="caption">Rower CityLine w ruchu</div>
       <div class="description">
-        Cena: 1 - 350zł <br>
-        Tłusta chrzanowa cegła <br>
-        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
+        Recenzja klienta: idealny do jazdy po mieście 🚲 <br>
+        <a href="#">Zobacz inne opinie</a>
       </div>
     </div>
 
-    <!-- Film 3 -->
+    <!-- Wideo: poradnik serwisowy -->
     <div class="gallery-item">
       <video controls>
         <source src="https://files.catbox.moe/exxd3v.MP4" type="video/mp4">
       </video>
-      <div class="caption">3CMC TOP GLASS</div>
+      <div class="caption">Jak zadbać o napęd rowerowy?</div>
       <div class="description">
-        Cena: 1 - 60, 3 - 170, 5 - 230 <br>
-        10 - 350, 25 - 700 (więcej DM) <br>
-        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
+        Prosty poradnik jak przedłużyć żywotność łańcucha i przerzutek <br>
+        <a href="#">Więcej poradników</a>
       </div>
     </div>
-
-    <!-- Film 4 -->
-    <div class="gallery-item">
-      <video controls>
-        <source src="https://files.catbox.moe/anu9si.mp4" type="video/mp4">
-      </video>
-      <div class="caption">Purple Punch USA</div>
-      <div class="description">
-        Cena: 1 - 100, 5 - 450, 10 - 800 <br>
-        Nowa odmianka z słonecznej kalifornii <br>
-        Jest to Indica stworzona z połączenia Larry OG x Granddaddy Purple <br>
-        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
-      </div>
-    </div>
-
-    <!-- Film 5 -->
-    <div class="gallery-item">
-      <video controls>
-        <source src="https://files.catbox.moe/mwyujb.mp4" type="video/mp4">
-      </video>
-      <div class="caption">🍫 Rs6 Dry blonde</div>
-      <div class="description">
-        Cena: 1 - 50, 2 - 100, 5 - 200, 10 - 400 <br>
-        Dobry suchy hasz typu blonde <br>
-        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
-      </div>
-    </div>
-
-    <!-- Film 6 -->
-    <div class="gallery-item">
-      <video controls>
-        <source src="https://files.catbox.moe/5t8rgc.mp4" type="video/mp4">
-      </video>
-      <div class="caption">Forbidden Fruit</div>
-      <div class="description">
-        Cena: 1 - 50, 5 - 250, 10 - 400, 15 - 580 <br>
-        Cherry Pie x Tangie 🌿 <br>
-        <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
-      </div>
-    </div>
-
-   <!-- Obrazek 7 (BANG KING 30K PRO) -->
-<div class="gallery-item">
-  <img src="https://files.catbox.moe/n2ad0f.jpg" alt="BANG KING 30K PRO"> <!-- Podmień link -->
-  <div class="caption">BANG KING 30K PRO 💥</div>
-  <div class="description">
-    Cennik: 1 - 70zł, 2 - 130zł, 5 - 300zł, 10 - 550zł <br><br>
-    Smaki dostępne: <br>
-    - Jungle juice 🥭🍍🥥<br>
-    - Black burst 🐼🤯<br>
-    - Blueberry sour raspberry ice <br>
-    - Blue burst 🧞‍♀️🤯<br>
-    - Strawberry kiwi 🥝 🍓<br>
-    - Passion fruit <br>
-    - Blueberry ice <br>
-    - Double grape 🍇🍇<br>
-    - Apple peach 🍎🍑<br><br>
-    <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
-  </div>
-</div>
-
-
-<div class="gallery-item">
-  <img src="https://files.catbox.moe/jld6am.jpg" alt="LEAN 986Pharmacy (Poziomka)"> <!-- Podmień link -->
-  <div class="caption">LEAN 986Pharmacy (Poziomka) 💥</div>
-  <div class="description">
-    4oz - 240, 8oz - 440 <br><br>
-    Sklad syropu <br>
-    12mg kodeiny na 5ml<br>
-    10mg prom na 5ml<br>
-    5% alkoholu na 5ml  <br>
-   <a href="https://t.me/czileraa" target="_blank">Zainteresowany? Kliknij tutaj</a>
 
   </div>
-
-  <script>
-    function copyZangi() {
-      const zangiNumber = document.getElementById('zangiNumber').innerText;
-      navigator.clipboard.writeText(zangiNumber).then(() => {
-        alert('Numer Zangi skopiowany: ' + zangiNumber);
-      });
-    }
-  </script>
 
 </body>
 </html>
